@@ -2,11 +2,15 @@ package Clases;
 public class Cuenta {
     private String No_Cuenta;
     private String Nombre_Cuenta;
+    private String Clasificacion;
+    private String sub_clasificacion;
     private double Cantidad;
 
-    public Cuenta(String no_Cuenta, String nombre_Cuenta, double cantidad) {
+    public Cuenta(String no_Cuenta, String nombre_Cuenta, String clasificacion, String sub_clasificacion, double cantidad) {
         this.No_Cuenta = no_Cuenta;
         this.Nombre_Cuenta = nombre_Cuenta;
+        this.Clasificacion=clasificacion;
+        this.sub_clasificacion=sub_clasificacion;
         this.Cantidad = cantidad;
     }
 
@@ -34,5 +38,19 @@ public class Cuenta {
         this.Cantidad = cantidad;
     }
 
-    
+    public String getClasificacion() {
+        return Clasificacion;
+    }
+
+    public void setClasificacion(String clasificacion) {
+        Clasificacion = clasificacion;
+    }
+
+    public String getSub_clasificacion() {
+        return sub_clasificacion;
+    }
+
+    public void setSub_clasificacion(String sub_clasificacion) {
+        this.sub_clasificacion = sub_clasificacion;
+    }
 }
