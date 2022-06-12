@@ -3,7 +3,7 @@ public class Cuenta {
     private String No_Cuenta;
     private String Nombre_Cuenta;
     private double Cantidad;
-    
+
     public Cuenta(String no_Cuenta, String nombre_Cuenta, double cantidad) {
         this.No_Cuenta = no_Cuenta;
         this.Nombre_Cuenta = nombre_Cuenta;
