@@ -5,7 +5,7 @@ public class Cuenta {
     private String Clasificacion;
     private String sub_clasificacion;
 
-    public Cuenta(String no_Cuenta, String nombre_Cuenta, String clasificacion, String sub_clasificacion, double cantidad) {
+    public Cuenta(String no_Cuenta, String nombre_Cuenta, String clasificacion, String sub_clasificacion) {
         this.No_Cuenta = no_Cuenta;
         this.Nombre_Cuenta = nombre_Cuenta;
         this.Clasificacion=clasificacion;

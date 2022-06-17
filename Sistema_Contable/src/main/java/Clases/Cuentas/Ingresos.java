@@ -1,9 +1,8 @@
 package Clases.Cuentas;
 public class Ingresos extends Cuenta{
 
-    public Ingresos(String no_Cuenta, String nombre_Cuenta, String sub_clasificacion,
-            double cantidad) {
-        super(no_Cuenta, nombre_Cuenta, "INGRESOS", sub_clasificacion, cantidad);
+    public Ingresos(String no_Cuenta, String nombre_Cuenta, String sub_clasificacion) {
+        super(no_Cuenta, nombre_Cuenta, "INGRESOS", sub_clasificacion);
     }
     
 }

@@ -9,7 +9,7 @@ public class Sistema_Contable {
         double sumaA=0;
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i).getClasificacion().equals("ACTIVOS")) {
-                sumaA+=a.get(i).getCantidad();
+                //sumaA+=a.get(i).getCantidad();
             }
         }
         return sumaA;
@@ -18,7 +18,7 @@ public class Sistema_Contable {
         double sumaA=0;
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i).getClasificacion().equals("PASIVOS")) {
-                sumaA+=a.get(i).getCantidad();
+                //sumaA+=a.get(i).getCantidad();
             }
         }
         return sumaA;
@@ -27,7 +27,7 @@ public class Sistema_Contable {
         double sumaA=0;
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i).getClasificacion().equals("CAPITAL")) {
-                sumaA+=a.get(i).getCantidad();
+                //sumaA+=a.get(i).getCantidad();
             }
         }
         return sumaA;
