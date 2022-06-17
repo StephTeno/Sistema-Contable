@@ -1,5 +1,8 @@
 package com.mycompany.sistema_contable;
 import java.util.*;
+
+import javax.swing.JOptionPane;
+
 import Clases.Cuentas.*;
 public class Sistema_Contable {
     public static double Sumatoria_Activos(ArrayList <Activos> a){
@@ -37,13 +40,22 @@ public class Sistema_Contable {
         Scanner l=new Scanner(System.in);
         boolean salir=false;
         int op;
-
-
         do{
-            System.out.println("Hola");
+            /*op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
+            + "1)Circulo\n "
+            + "2)Romboide\n "
+            + "3)Cuadrado\n "
+            + "4)Triangulo\n "
+            + "5)Rectangulo"));*/
+            
             while(!l.hasNextInt())                             
             {
-                System.out.println("Ingrese su opción: ");
+                JOptionPane.showMessageDialog(null, "Elije una opcion:\n "
+                + "1)Circulo\n "
+                + "2)Romboide\n "
+                + "3)Cuadrado\n "
+                + "4)Triangulo\n "
+                + "5)Rectangulo");
                 l.next();
             }
             op = l.nextInt();
