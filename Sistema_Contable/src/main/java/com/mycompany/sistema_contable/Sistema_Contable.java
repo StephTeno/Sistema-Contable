@@ -9,18 +9,25 @@ public class Sistema_Contable {
 
 
         do{
-            while(!l.hasNextInt())                             
-            {
-                System.out.println("Ingrese su opción: ");
-                l.next();
-            }
-        
-            op = l.nextInt();
-            switch(op){
-
-            }
-
-        }while(!salir);
+                String line = l.nextLine();
+                try {
+                    op = Integer.parseInt(line);
+                } catch (NumberFormatException e) {
+                    System.out.println("Ingrese numeros enteros para escoger su opción: ");
+                    continue;
+                }
+                switch (op) {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        System.out.print("\n**Ha escogido una opción invalida, ¡Intentelo nuevamente!**");
+                        break;
+                }
+        }while(!salir && l.hasNextLine());
         l.close();
     }
 }
