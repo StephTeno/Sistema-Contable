@@ -2,23 +2,23 @@ package Clases.Para_Registrar;
 import Clases.Cuentas.Activos;
 
 public class R_Activos{
-    private Registro ra;
-    private Activos a;
-    public R_Activos(Registro ra, Activos a) {
-        this.ra = ra;
-        this.a = a;
+    private Registro rActivos;
+    private Activos Activos;
+    public R_Activos(Registro rActivos, Activos Activos) {
+        this.rActivos = rActivos;
+        this.Activos = Activos;
     }
-    public Registro getRa() {
-        return ra;
+    public Registro getRActivos() {
+        return rActivos;
     }
-    public void setRa(Registro ra) {
-        this.ra = ra;
+    public void setRActivos(Registro rActivos) {
+        this.rActivos = rActivos;
     }
-    public Activos getA() {
-        return a;
+    public Activos getActivos() {
+        return Activos;
     }
-    public void setA(Activos a) {
-        this.a = a;
+    public void setActivos(Activos Activos) {
+        this.Activos = Activos;
     }
 
     
