@@ -1,6 +1,37 @@
 package com.mycompany.sistema_contable;
 import java.util.*;
+import Clases.Cuentas.*;
 public class Sistema_Contable {
+    public static double Sumatoria_Activos(ArrayList <Activos> a){
+        double sumaA=0;
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).getClasificacion().equals("ACTIVOS")) {
+                sumaA+=a.get(i).getCantidad();
+            }
+        }
+        return sumaA;
+    }
+    public static double Sumatoria_Pasivos(ArrayList <Pasivos> a){
+        double sumaA=0;
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).getClasificacion().equals("PASIVOS")) {
+                sumaA+=a.get(i).getCantidad();
+            }
+        }
+        return sumaA;
+    }
+    public static double Sumatoria_Capital(ArrayList <Capital> a){
+        double sumaA=0;
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).getClasificacion().equals("CAPITAL")) {
+                sumaA+=a.get(i).getCantidad();
+            }
+        }
+        return sumaA;
+    }
+
+
+
 
     public static void main(String[] args) {
         Scanner l=new Scanner(System.in);
@@ -9,25 +40,26 @@ public class Sistema_Contable {
 
 
         do{
-                String line = l.nextLine();
-                try {
-                    op = Integer.parseInt(line);
-                } catch (NumberFormatException e) {
-                    System.out.println("Ingrese numeros enteros para escoger su opción: ");
-                    continue;
-                }
-                switch (op) {
-                    case 1:
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    default:
-                        System.out.print("\n**Ha escogido una opción invalida, ¡Intentelo nuevamente!**");
-                        break;
-                }
-        }while(!salir && l.hasNextLine());
+            System.out.println("Hola");
+            while(!l.hasNextInt())                             
+            {
+                System.out.println("Ingrese su opción: ");
+                l.next();
+            }
+            op = l.nextInt();
+            switch (op) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    System.out.println("**Ha escogido una opción invalida, ¡Intentelo nuevamente!**");
+                    break;
+            }
+
+        }while(!salir);
         l.close();
     }
 }
