@@ -40,10 +40,21 @@ public class Sistema_Contable {
 
 
         do{
+            /*op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
+                    + "1)Circulo\n "
+                    + "2)Romboide\n "
+                    + "3)Cuadrado\n "
+                    + "4)Triangulo\n "
+                    + "5)Rectangulo"));*/
             System.out.println("Hola");
             while(!l.hasNextInt())                             
             {
-                System.out.println("Ingrese su opción: ");
+                JOptionPane.showMessageDialog(null, "Elije una opcion:\n "
+                    + "1)Circulo\n "
+                    + "2)Romboide\n "
+                    + "3)Cuadrado\n "
+                    + "4)Triangulo\n "
+                    + "5)Rectangulo"));
                 l.next();
             }
             op = l.nextInt();
