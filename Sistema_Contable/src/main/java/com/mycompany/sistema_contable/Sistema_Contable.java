@@ -37,8 +37,6 @@ public class Sistema_Contable {
         Scanner l=new Scanner(System.in);
         boolean salir=false;
         int op;
-
-
         do{
             /*op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
                     + "1)Circulo\n "
@@ -54,7 +52,7 @@ public class Sistema_Contable {
                     + "2)Romboide\n "
                     + "3)Cuadrado\n "
                     + "4)Triangulo\n "
-                    + "5)Rectangulo"));
+                    + "5)Rectangulo");
                 l.next();
             }
             op = l.nextInt();
