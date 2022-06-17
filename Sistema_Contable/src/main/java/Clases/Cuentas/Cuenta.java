@@ -4,14 +4,12 @@ public class Cuenta {
     private String Nombre_Cuenta;
     private String Clasificacion;
     private String sub_clasificacion;
-    private double Cantidad;
 
     public Cuenta(String no_Cuenta, String nombre_Cuenta, String clasificacion, String sub_clasificacion, double cantidad) {
         this.No_Cuenta = no_Cuenta;
         this.Nombre_Cuenta = nombre_Cuenta;
         this.Clasificacion=clasificacion;
         this.sub_clasificacion=sub_clasificacion;
-        this.Cantidad = cantidad;
     }
 
     public String getNo_Cuenta() {
@@ -30,14 +28,6 @@ public class Cuenta {
         this.Nombre_Cuenta = nombre_Cuenta;
     }
 
-    public double getCantidad() {
-        return this.Cantidad;
-    }
-
-    public void setCantidad(double cantidad) {
-        this.Cantidad = cantidad;
-    }
-
     public String getClasificacion() {
         return Clasificacion;
     }
@@ -54,12 +44,12 @@ public class Cuenta {
         this.sub_clasificacion = sub_clasificacion;
     }
 
-    public void Depositar (double x){
+    /*public void Depositar (double x){
         double ns=this.Cantidad+x;
         this.Cantidad=ns;
     }
     public void Retirar(double y){
         double ns=this.Cantidad-y;
         this.Cantidad=ns;
-    }
+    }*/
 }
