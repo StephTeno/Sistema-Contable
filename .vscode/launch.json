@@ -4,7 +4,13 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Launch Sistema_Contable",
+            "request": "launch",
+            "mainClass": "com.mycompany.sistema_contable.Sistema_Contable",
+            "projectName": "Sistema-Contable_670b148c"
+        },
         {
             "type": "java",
             "name": "Launch Current File",
