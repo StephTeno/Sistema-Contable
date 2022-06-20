@@ -41,24 +41,15 @@ public class Sistema_Contable {
         boolean salir=false;
         int op;
         do{
-            /*op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
+            op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
             + "1)Circulo\n "
             + "2)Romboide\n "
             + "3)Cuadrado\n "
             + "4)Triangulo\n "
-            + "5)Rectangulo"));*/
-            
-            while(!l.hasNextInt())                             
-            {
-                JOptionPane.showMessageDialog(null, "Elije una opcion:\n "
-                + "1)Circulo\n "
-                + "2)Romboide\n "
-                + "3)Cuadrado\n "
-                + "4)Triangulo\n "
-                + "5)Rectangulo");
-                l.next();
-            }
-            op = l.nextInt();
+            + "5)Rectangulo")
+            );
+
+
             switch (op) {
                 case 1:
                     //hd=true;
