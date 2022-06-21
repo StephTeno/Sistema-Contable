@@ -42,18 +42,16 @@ public class Sistema_Contable {
         int op;
         do{
             op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
-            + "1)Circulo\n "
+            + "1)Ingrese los movimientos de transacciones\n "
             + "2)Romboide\n "
-            + "3)Cuadrado\n "
-            + "4)Triangulo\n "
-            + "5)Rectangulo")
-            );
+            + "3)Balanza de Comprobación\n "
+            + "4)Estado Financieros\n "));
 
 
             switch (op) {
                 case 1:
                     //hd=true;
-                    JOptionPane.showMessageDialog(null,"\n\tREGISTRO DE CUENTAS");
+                    JOptionPane.showMessageDialog(null,"\n\tREGISTRO DE OPERACIONES");
                     JOptionPane.showMessageDialog(null,"\nIngrese los siguientes datos");
                     int No_Cuenta;
                     String Nombre_Cuenta, Clasificacion, Sub_clasificacion;
@@ -64,7 +62,7 @@ public class Sistema_Contable {
                         Sub_clasificacion=JOptionPane.showInputDialog("\nSub Clasificación de la Cuenta: ");
                         cuenta.add(new Cuenta(No_Cuenta, Nombre_Cuenta, Clasificacion, Sub_clasificacion));
                     }
-                    System.out.print("\nPRODUCTO REGISTRADOS EXITOSAMENTE \n");
+                    JOptionPane.showMessageDialog(null,"\nPRODUCTO REGISTRADOS EXITOSAMENTE \n");
                     break;
                 case 2:
                     break;
