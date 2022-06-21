@@ -53,18 +53,15 @@ public class Sistema_Contable {
             switch (op) {
                 case 1:
                     //hd=true;
-                    System.out.print("\n\tREGISTRO DE CUENTAS");
-                    System.out.print("\nIngrese los siguientes datos");
-                    String No_Cuenta, Nombre_Cuenta, Clasificacion, Sub_clasificacion;
+                    JOptionPane.showMessageDialog(null,"\n\tREGISTRO DE CUENTAS");
+                    JOptionPane.showMessageDialog(null,"\nIngrese los siguientes datos");
+                    int No_Cuenta;
+                    String Nombre_Cuenta, Clasificacion, Sub_clasificacion;
                     for (int i = 0; i <1; i++) {
-                        System.out.print("\nNumero de Referencia de la Cuenta: ");
-                        No_Cuenta=l.next();
-                        System.out.print("\nNombre de la Cuenta: ");
-                        Nombre_Cuenta=l.next();
-                        System.out.print("\nClasificación de la Cuenta (Activo, Pasivo, Capital, Gasto, Ingreso): ");
-                        Clasificacion=l.next();
-                        System.out.println("\nSub Clasificación de la Cuenta: ");
-                        Sub_clasificacion=l.next();
+                        No_Cuenta=Integer.parseInt(JOptionPane.showInputDialog("\nNumero de Referencia de la Cuenta: "));
+                        Nombre_Cuenta=JOptionPane.showInputDialog("\nNombre de la Cuenta: ");
+                        Clasificacion=JOptionPane.showInputDialog("\nClasificación de la Cuenta (Activo, Pasivo, Capital, Gasto, Ingreso): ");
+                        Sub_clasificacion=JOptionPane.showInputDialog("\nSub Clasificación de la Cuenta: ");
                         cuenta.add(new Cuenta(No_Cuenta, Nombre_Cuenta, Clasificacion, Sub_clasificacion));
                     }
                     System.out.print("\nPRODUCTO REGISTRADOS EXITOSAMENTE \n");
