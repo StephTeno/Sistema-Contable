@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch algo",
+            "request": "launch",
+            "mainClass": "com.mycompany.sistema_contable.algo",
+            "projectName": "Sistema-Contable_670b148c"
+        },
+        {
+            "type": "java",
             "name": "Launch Ventana",
             "request": "launch",
             "mainClass": "com.mycompany.sistema_contable.Ventana",
