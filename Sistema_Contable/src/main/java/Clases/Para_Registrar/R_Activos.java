@@ -21,8 +21,5 @@ public class R_Activos{
         this.Activos = Activos;
     }
 
-    
-
-
 }
 

@@ -43,9 +43,8 @@ public class Sistema_Contable {
         do{
             op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
             + "1)Ingrese los movimientos de transacciones\n "
-            + "2)Romboide\n "
-            + "3)Balanza de Comprobación\n "
-            + "4)Estado Financieros\n "));
+            + "2)Balanza de Comprobación\n "
+            + "3)Estado Financieros\n "));
 
 
             switch (op) {
