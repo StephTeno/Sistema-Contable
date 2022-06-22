@@ -39,19 +39,34 @@ public class Sistema_Contable {
         Scanner l=new Scanner(System.in);
         ArrayList <Cuenta> cuenta=new ArrayList<>();
         boolean salir=false;
+        String Botones[]={"Compra", "Pago de Gasto", };
         int op;
         do{
-            op = Integer.parseInt(JOptionPane.showInputDialog("Elije una opcion:\n "
+            op = Integer.parseInt(JOptionPane.showMessageDialog(null, ("Elije una opcion:\n "
             + "1)Ingrese los movimientos de transacciones\n "
             + "2)Balanza de Comprobación\n "
-            + "3)Estado Financieros\n "));
+            + "3)Estado Financieros\n "), "Menú", messageType));
 
 
             switch (op) {
                 case 1:
                     //hd=true;
                     JOptionPane.showMessageDialog(null,"\n\tREGISTRO DE OPERACIONES");
-                    JOptionPane.showMessageDialog(null,"\nIngrese los siguientes datos");
+                    int oP = JOptionPane.showOptionDialog (null, "\nPresione el botón de la transacción realizada", "REGISTRO DE OPERACIONES", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null/*icono*/, Botones, Botones[0]);
+
+                    switch (oP) {
+                        case 1:
+                            
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                    
+                    
+                    
+                    
+                    
                     int No_Cuenta;
                     String Nombre_Cuenta, Clasificacion, Sub_clasificacion;
                     for (int i = 0; i <1; i++) {
