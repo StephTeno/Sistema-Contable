@@ -38,6 +38,8 @@ public class Sistema_Contable {
     public static void main(String[] args) {
         Scanner l=new Scanner(System.in);
         //ArrayList <Cuenta> cuenta=new ArrayList<>();
+        Activos Caja=new Activos("1.1.1.1", "Caja", clasificacion, sub_clasificacion)
+        ArrayList <R_Activos> Inventarios=new ArrayList<>();
         boolean salir=false;
         String Botones[]={"Compra", "Pago", "Ventas"}, menu[] ={"Ingrese los movimientos de transacciones","Balanza de Comprobación","Estado Financieros"}, compras[]={"Inventario","Bienes inmuebles"}, pagos[]={"Servicios Básicos"}, venta[]={"Productos"};
         do{;
@@ -46,13 +48,23 @@ public class Sistema_Contable {
                 case "Ingrese los movimientos de transacciones":
                     //hd=true;
                     JOptionPane.showMessageDialog(null,"\n\tREGISTRO DE OPERACIONES");
-                    int oP = JOptionPane.showOptionDialog (null, "\nPresione el botón de la transacción realizada", "REGISTRO DE OPERACIONES", 0 , JOptionPane.WARNING_MESSAGE, null/*icono*/, Botones, Botones[0]);
+                    int oP = JOptionPane.showOptionDialog (null, "\nPresione el botón de la transacción realizada", "REGISTRO DE OPERACIONES", 0 , JOptionPane.WARNING_MESSAGE, null, Botones, Botones[0]);
                     oP=oP+1;
                     switch (oP) {
                         case 1:
                             String com = (String) JOptionPane.showInputDialog(null, "¿Qué compró?", "COMPRA", JOptionPane.QUESTION_MESSAGE, null, compras, compras[0]);
                             switch (com) {
                                 case "Inventario":
+                                int No_Cuenta;
+                                String Nombre_Cuenta, Clasificacion, Sub_clasificacion;
+                                for (int i = 0; i <1; i++) {
+                                    No_Cuenta=Integer.parseInt(JOptionPane.showInputDialog("\nNumero de Referencia de la Cuenta: "));
+                                    Nombre_Cuenta=JOptionPane.showInputDialog("\nNombre de la Cuenta: ");
+                                    Clasificacion=JOptionPane.showInputDialog("\nClasificación de la Cuenta (Activo, Pasivo, Capital, Gasto, Ingreso): ");
+                                    Sub_clasificacion=JOptionPane.showInputDialog("\nSub Clasificación de la Cuenta: ");
+                                    Inventarios.add(new R_Activos(rActivos, Activos))
+                                }
+                                JOptionPane.showMessageDialog(null,"\nPRODUCTO REGISTRADOS EXITOSAMENTE \n");
                                     
                                     break;
                             
