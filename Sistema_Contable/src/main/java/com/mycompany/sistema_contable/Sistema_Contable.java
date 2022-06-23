@@ -45,8 +45,10 @@ public class Sistema_Contable {
         Activos PapeleriasYUtiles=new Activos("1.1.2.3", "Papelerías Y Utiles", "Activo Circulante", "Activo Circulante Realizable");
         Activos Maquinaria=new Activos("1.2.1.1", "Maquinaria", "Activo No Circulante", "Activo Fijo");
         Activos Mobiliario=new Activos("1.2.1.2", "Mobiliario", "Activo No Circulante", "Activo Fijo");
-        Pasivos Proveedores=new Pasivos("2.1.0.1", "Proveedores", "", sub_sub_c)
-
+        Pasivos Proveedores=new Pasivos("2.1.0.1", "Proveedores", "Pasivo No Circulante");
+        Pasivos ImpuestoSobreRenta=new Pasivos("2.1.0.2", "Impuesto Sobre Renta", "Pasivo No Circulante");
+        Capital CapitalSocial=new Capital("3.1.0.1", "Capital Social", "Capital Contribuido");
+        Capital UtilidadDelEjercicio=new Capital("3.2.0.1", "Utilidad Del Ejercicio", "Capital Contribuido");
 
 
         ArrayList <R_Activos> Inventarios=new ArrayList<>();
