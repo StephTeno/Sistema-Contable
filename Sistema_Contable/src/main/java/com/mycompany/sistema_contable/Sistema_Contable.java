@@ -3,6 +3,7 @@ import java.util.*;
 import javax.swing.JOptionPane;
 import Clases.Cuentas.*;
 import Clases.Para_Registrar.R_Activos;
+import Clases.Para_Registrar.R_Pasivos;
 public class Sistema_Contable {
     /* public static double Sumatoria_Activos(ArrayList <R_Activos> a){
         double sumaA=0;
@@ -36,24 +37,27 @@ public class Sistema_Contable {
 
 
     public static void main(String[] args) {
-        Scanner l=new Scanner(System.in);
-        //ArrayList <Cuenta> cuenta=new ArrayList<>();
-        Activos Caja=new Activos("1.1.1.1", "Caja", "Activo Circulante", "Activo Circulante Disponible");
-        Activos Clientes=new Activos("1.1.2.1", "Clientes", "Activo Circulante", "Activo Circulante Realizable");
-        Activos Empleados=new Activos("1.1.2.2", "Empleados", "Activo Circulante", "Activo Circulante Realizable");
-        Activos Inventario=new Activos("1.1.2.3", "Inventario", "Activo Circulante", "Activo Circulante Realizable");
-        Activos PapeleriasYUtiles=new Activos("1.1.2.3", "Papelerías Y Utiles", "Activo Circulante", "Activo Circulante Realizable");
-        Activos Maquinaria=new Activos("1.2.1.1", "Maquinaria", "Activo No Circulante", "Activo Fijo");
-        Activos Mobiliario=new Activos("1.2.1.2", "Mobiliario", "Activo No Circulante", "Activo Fijo");
-        Pasivos Proveedores=new Pasivos("2.1.0.1", "Proveedores", "Pasivo No Circulante");
-        Pasivos ImpuestoSobreRenta=new Pasivos("2.1.0.2", "Impuesto Sobre Renta", "Pasivo No Circulante");
-        Capital CapitalSocial=new Capital("3.1.0.1", "Capital Social", "Capital Contribuido");
-        Capital UtilidadDelEjercicio=new Capital("3.2.0.1", "Utilidad Del Ejercicio", "Capital Contribuido");
-        double SIV=0;
-
-        ArrayList <R_Activos> Inventarios=new ArrayList<>();
+        double SIV=0, SPU=0;
         boolean salir=false;
-        String Botones[]={"Compra", "Pago", "Ventas"}, menu[] ={"Ingrese los movimientos de transacciones","Balanza de Comprobación","Estado Financieros"}, compras[]={"Inventario","Bienes inmuebles"}, pagos[]={"Servicios Básicos"}, venta[]={"Productos"};
+        String Botones[]={"Compra", "Pago", "Ventas"}, menu[] ={"Ingrese los movimientos de transacciones","Balanza de Comprobación","Estado Financieros"}, compras[]={"Inventario","Papelería y utiles"}, pagos[]={"Proveedores", "Impuesto sobre Renta"}, venta[]={"Productos"};
+
+        //Catologo de Cuenta
+            Activos Caja=new Activos("1.1.1.1", "Caja", "Activo Circulante", "Activo Circulante Disponible");
+            Activos Clientes=new Activos("1.1.2.1", "Clientes", "Activo Circulante", "Activo Circulante Realizable");
+            Activos Empleados=new Activos("1.1.2.2", "Empleados", "Activo Circulante", "Activo Circulante Realizable");
+            Activos Inventario=new Activos("1.1.2.3", "Inventario", "Activo Circulante", "Activo Circulante Realizable");
+            Activos PapeleriasYUtiles=new Activos("1.1.2.3", "Papelerías Y Utiles", "Activo Circulante", "Activo Circulante Realizable");
+            Activos Maquinaria=new Activos("1.2.1.1", "Maquinaria", "Activo No Circulante", "Activo Fijo");
+            Activos Mobiliario=new Activos("1.2.1.2", "Mobiliario", "Activo No Circulante", "Activo Fijo");
+            Pasivos Proveedores=new Pasivos("2.1.0.1", "Proveedores", "Pasivo No Circulante");
+            Pasivos ImpuestoSobreRenta=new Pasivos("2.1.0.2", "Impuesto Sobre Renta", "Pasivo No Circulante");
+            Capital CapitalSocial=new Capital("3.1.0.1", "Capital Social", "Capital Contribuido");
+            Capital UtilidadDelEjercicio=new Capital("3.2.0.1", "Utilidad Del Ejercicio", "Capital Contribuido");
+
+        //ArrayList
+            ArrayList <R_Activos> PapeleriasyUtiles = new ArrayList<>();
+            ArrayList <R_Activos> Inventarios=new ArrayList<>();
+            ArrayList <R_Pasivos> Proveedore=new ArrayList<>();
         do{;
             String op = (String) JOptionPane.showInputDialog(null, "Elija el proceso a mostrar", "MENÚ", JOptionPane.QUESTION_MESSAGE, null, menu, menu[0]);
             switch (op) {
@@ -76,7 +80,20 @@ public class Sistema_Contable {
                                     double fin=precio*cantidad;
                                     SIV+=fin;
                                     Inventarios.add(new R_Activos(fecha, descripcion, cantidad, Inventario, precio));
-                                    
+                                }
+                                JOptionPane.showMessageDialog(null, "\nPRODUCTO REGISTRADOS EXITOSAMENTE \n", "REGISTRO EXITOSO", JOptionPane.INFORMATION_MESSAGE);                                    
+                                    break;
+
+                                case "Papelerías y utiles":
+                                int can=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de Papelería y Utiles a Registrar", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                for (int i = 0; i <can; i++) {
+                                    String fecha=JOptionPane.showInputDialog(null, "FECHA: ", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE);
+                                    String descripcion=JOptionPane.showInputDialog(null, "DESCRIPCIÓN", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE);
+                                    double cantidad=Double.parseDouble(JOptionPane.showInputDialog(null, "CANTIDAD", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                    double precio=Double.parseDouble(JOptionPane.showInputDialog(null, "PRECIO", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                    double fi=precio*cantidad;
+                                    SPU+=fi;
+                                    PapeleriasyUtiles.add(new R_Activos(fecha, descripcion, cantidad, Inventario, precio));
                                 }
                                 JOptionPane.showMessageDialog(null, "\nPRODUCTO REGISTRADOS EXITOSAMENTE \n", "REGISTRO EXITOSO", JOptionPane.INFORMATION_MESSAGE);                                    
                                     break;
@@ -88,10 +105,14 @@ public class Sistema_Contable {
                         case 2:
                             String pago = (String) JOptionPane.showInputDialog(null, "¿Qué pagó?", "PAGO", JOptionPane.QUESTION_MESSAGE, null, pagos, pagos[0]);
                             switch (pago) {
-                                case "Inventario":
+                                case "Proveedores":
                                     
                                     break;
-                            
+                                
+                                case "Impuesto sobre Renta":
+                                    
+                                    break;
+                           
                                 default:
                                     break;
                             }
@@ -121,6 +142,5 @@ public class Sistema_Contable {
             }
 
         } while(!salir);
-        l.close();
     }
 }
