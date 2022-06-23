@@ -45,10 +45,10 @@ public class Sistema_Contable {
         Activos PapeleriasYUtiles=new Activos("1.1.2.3", "Papelerías Y Utiles", "Activo Circulante", "Activo Circulante Realizable");
         Activos Maquinaria=new Activos("1.2.1.1", "Maquinaria", "Activo No Circulante", "Activo Fijo");
         Activos Mobiliario=new Activos("1.2.1.2", "Mobiliario", "Activo No Circulante", "Activo Fijo");
+        Pasivos Proveedores=new Pasivos("2.1.0.1", "Proveedores", "", sub_sub_c)
 
 
 
-        
         ArrayList <R_Activos> Inventarios=new ArrayList<>();
         boolean salir=false;
         String Botones[]={"Compra", "Pago", "Ventas"}, menu[] ={"Ingrese los movimientos de transacciones","Balanza de Comprobación","Estado Financieros"}, compras[]={"Inventario","Bienes inmuebles"}, pagos[]={"Servicios Básicos"}, venta[]={"Productos"};
