@@ -93,7 +93,7 @@ public class Sistema_Contable {
                                     double precio=Double.parseDouble(JOptionPane.showInputDialog(null, "PRECIO", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
                                     double fi=precio*cantidad;
                                     SPU+=fi;
-                                    PapeleriasyUtiles.add(new R_Activos(fecha, descripcion, cantidad, Inventario, precio));
+                                    PapeleriasyUtiles.add(new R_Activos(fecha, descripcion, cantidad, PapeleriasYUtiles, precio));
                                 }
                                 JOptionPane.showMessageDialog(null, "\nPRODUCTO REGISTRADOS EXITOSAMENTE \n", "REGISTRO EXITOSO", JOptionPane.INFORMATION_MESSAGE);                                    
                                     break;
@@ -112,9 +112,8 @@ public class Sistema_Contable {
                                     String descripcion=JOptionPane.showInputDialog(null, "DESCRIPCIÓN", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE);
                                     double cantidad=Double.parseDouble(JOptionPane.showInputDialog(null, "CANTIDAD", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
                                     double precio=Double.parseDouble(JOptionPane.showInputDialog(null, "PRECIO", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
-                                    double fi=precio*cantidad;
                                     SPU+=fi;
-                                    PapeleriasyUtiles.add(new R_Activos(fecha, descripcion, cantidad, Inventario, precio));
+                                    Proveedore.add(new R_Pasivos(fecha, descripcion, cantidad));
                                 }
                                 JOptionPane.showMessageDialog(null, "\nPRODUCTO REGISTRADOS EXITOSAMENTE \n", "REGISTRO EXITOSO", JOptionPane.INFORMATION_MESSAGE);                                    
                                     break;
