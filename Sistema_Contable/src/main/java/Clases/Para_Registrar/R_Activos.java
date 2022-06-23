@@ -1,24 +1,28 @@
 package Clases.Para_Registrar;
 import Clases.Cuentas.Activos;
 
-public class R_Activos{
-    private Registro rActivos;
+public class R_Activos extends Registro{
     private Activos Activos;
-    public R_Activos(Registro rActivos, Activos Activos) {
-        this.rActivos = rActivos;
+    private double Precio;
+    public R_Activos(String fecha, String descripcion, double cantidad, Activos Activos, double precio) {
+        super(fecha, descripcion, cantidad);
         this.Activos = Activos;
+        this.Precio=precio;
     }
-    public Registro getRActivos() {
-        return rActivos;
-    }
-    public void setRActivos(Registro rActivos) {
-        this.rActivos = rActivos;
-    }
+
     public Activos getActivos() {
         return Activos;
     }
     public void setActivos(Activos Activos) {
         this.Activos = Activos;
+    }
+
+    public double getPrecio() {
+        return Precio;
+    }
+
+    public void setPrecio(double precio) {
+        Precio = precio;
     }
 
 }
