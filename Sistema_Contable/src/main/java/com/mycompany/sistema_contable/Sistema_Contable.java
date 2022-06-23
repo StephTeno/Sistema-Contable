@@ -106,7 +106,17 @@ public class Sistema_Contable {
                             String pago = (String) JOptionPane.showInputDialog(null, "¿Qué pagó?", "PAGO", JOptionPane.QUESTION_MESSAGE, null, pagos, pagos[0]);
                             switch (pago) {
                                 case "Proveedores":
-                                    
+                                int can=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese la cantidad de Papelería y Utiles a Registrar", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                for (int i = 0; i <can; i++) {
+                                    String fecha=JOptionPane.showInputDialog(null, "FECHA: ", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE);
+                                    String descripcion=JOptionPane.showInputDialog(null, "DESCRIPCIÓN", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE);
+                                    double cantidad=Double.parseDouble(JOptionPane.showInputDialog(null, "CANTIDAD", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                    double precio=Double.parseDouble(JOptionPane.showInputDialog(null, "PRECIO", "Papelería y Utiles", JOptionPane.INFORMATION_MESSAGE));
+                                    double fi=precio*cantidad;
+                                    SPU+=fi;
+                                    PapeleriasyUtiles.add(new R_Activos(fecha, descripcion, cantidad, Inventario, precio));
+                                }
+                                JOptionPane.showMessageDialog(null, "\nPRODUCTO REGISTRADOS EXITOSAMENTE \n", "REGISTRO EXITOSO", JOptionPane.INFORMATION_MESSAGE);                                    
                                     break;
                                 
                                 case "Impuesto sobre Renta":
