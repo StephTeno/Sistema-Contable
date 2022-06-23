@@ -38,7 +38,17 @@ public class Sistema_Contable {
     public static void main(String[] args) {
         Scanner l=new Scanner(System.in);
         //ArrayList <Cuenta> cuenta=new ArrayList<>();
-        Activos Caja=new Activos("1.1.1.1", "Caja", clasificacion, sub_clasificacion)
+        Activos Caja=new Activos("1.1.1.1", "Caja", "Activo Circulante", "Activo Circulante Disponible");
+        Activos Clientes=new Activos("1.1.2.1", "Clientes", "Activo Circulante", "Activo Circulante Realizable");
+        Activos Empleados=new Activos("1.1.2.2", "Empleados", "Activo Circulante", "Activo Circulante Realizable");
+        Activos Inventario=new Activos("1.1.2.3", "Inventario", "Activo Circulante", "Activo Circulante Realizable");
+        Activos PapeleriasYUtiles=new Activos("1.1.2.3", "Papelerías Y Utiles", "Activo Circulante", "Activo Circulante Realizable");
+        Activos Maquinaria=new Activos("1.2.1.1", "Maquinaria", "Activo No Circulante", "Activo Fijo");
+        Activos Mobiliario=new Activos("1.2.1.2", "Mobiliario", "Activo No Circulante", "Activo Fijo");
+
+
+
+        
         ArrayList <R_Activos> Inventarios=new ArrayList<>();
         boolean salir=false;
         String Botones[]={"Compra", "Pago", "Ventas"}, menu[] ={"Ingrese los movimientos de transacciones","Balanza de Comprobación","Estado Financieros"}, compras[]={"Inventario","Bienes inmuebles"}, pagos[]={"Servicios Básicos"}, venta[]={"Productos"};
@@ -62,7 +72,7 @@ public class Sistema_Contable {
                                     Nombre_Cuenta=JOptionPane.showInputDialog("\nNombre de la Cuenta: ");
                                     Clasificacion=JOptionPane.showInputDialog("\nClasificación de la Cuenta (Activo, Pasivo, Capital, Gasto, Ingreso): ");
                                     Sub_clasificacion=JOptionPane.showInputDialog("\nSub Clasificación de la Cuenta: ");
-                                    Inventarios.add(new R_Activos(rActivos, Activos))
+                                    
                                 }
                                 JOptionPane.showMessageDialog(null,"\nPRODUCTO REGISTRADOS EXITOSAMENTE \n");
                                     
